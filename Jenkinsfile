@@ -27,5 +27,10 @@
                     }
                 }
             }
+            stage('Confirming build success') {
+                steps{  
+                    writeFile file: 'emailservice.txt', text: 'Build is completed successfully.'
+                    }
+            }
         }
     }
